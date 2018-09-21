@@ -1,0 +1,26 @@
+{
+	"test": "test change again",
+	"message": "Oh, yeah, this works!",
+	"appType": {
+		"options": [
+			"one",
+			"two",
+			"three",
+			{
+				"flag": true
+			}
+		]
+	},
+	"foo": {
+		"bar": {
+			"goo": {
+				"boo": false
+			},
+			"name": "this is the name"
+		}
+	},
+	"numberOne": 1,
+	"numberTwo": {
+		"title": "nothing spectacular to see here"
+	}
+}
