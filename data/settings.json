@@ -22,5 +22,41 @@
 	"numberOne": 1,
 	"numberTwo": {
 		"title": "nothing spectacular to see here"
+	},
+	"dashboard": {
+		"components": {
+			"jammingControls": {
+				"enabled": false
+			},
+			"jamming-indicators": {
+				"enabled": true
+			}
+		}
+	},
+	"ui": {
+		"components": [
+			{
+				"jamming-controls": {
+					"currentSettings": {
+						"x": null,
+						"y": null,
+						"width": null,
+						"height": null
+					},
+					"enabled": true
+				}
+			},
+			{
+				"jamming-indicators": {
+					"currentSettings": {
+						"x": null,
+						"y": null,
+						"width": null,
+						"height": null
+					},
+					"enabled": false
+				}
+			}
+		]
 	}
 }

@@ -52,7 +52,6 @@ config.set("appType.options", anArrayObj);
 console.log(config.store);
 // console.log(`the whole config object: ${config.store}`);
 
-
 // get the item count
 // --------------------------------------------------------
 console.log(`item count: ${config.size}`);
@@ -71,12 +70,73 @@ config.set("test", "test change");
 // --------------------------------------------------------
 config.set("test", "test change again");
 
-
 // watch another given key for changes
 // --------------------------------------------------------
 config.onDidChange("foo.bar.goo.boo", (newValue, oldValue) => {
-  console.log(`Yep, "foo.bar.goo.boo" changed from "${oldValue}" to "${newValue}"`);
+  console.log(
+    `Yep, "foo.bar.goo.boo" changed from "${oldValue}" to "${newValue}"`
+  );
 });
 
 // change "foo.bar.goo.boo" to see if watch is working
 config.set("foo.bar.goo.boo", false);
+
+// show the jamming controls
+console.log(
+  "dashboard.components.jammingControls.enabled",
+  config.get("dashboard.components.jammingControls.enabled")
+);
+
+// watch for the jamming controls enabled change
+// --------------------------------------------------------
+config.onDidChange(
+  "dashboard.components.jammingControls.enabled",
+  (newValue, oldValue) => {
+    console.log(
+      `Yep, "dashboard.components.jammingControls.enabled" changed from "${oldValue}" to "${newValue}"`
+    );
+  }
+);
+
+// change "dashboard.components.jamming-controls.enabled" to see if watch is working
+// config.set("dashboard.components.jammingControls.enabled", false);
+
+// change "dashboard.components.jammingControls.enabled" as a object to see if it updates
+// let updateObj = {
+//   dashboard: {
+//     components: {
+//       jammingControls: {
+//         enabled: false
+//       }
+//     }
+//   }
+// };
+
+// config.set(updateObj);
+
+// updateObj = {
+//   dashboard: {
+//     components: {
+//       jammingControls: {
+//         enabled: true
+//       }
+//     }
+//   }
+// };
+
+// config.set(updateObj);
+
+// config.set("appType.options.flag", false);
+
+// const uiComponents = config.get("ui");
+// console.log("ui", uiComponents);
+// console.log(uiComponents.components);
+
+// uiComponents.components.map((component) => {
+//   var controlName = Object.keys(component)[0];
+//   console.log(controlName);
+// });
+
+
+const uiComponents = config.get("")
+
